@@ -1,0 +1,5 @@
+name: 'Setup Environment'
+description: 'Sets up the Python environment and installs dependencies.'
+runs:
+  using: 'docker'
+  image: 'docker://manupalsingh/cbd3345_ica2:main'
