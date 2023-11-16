@@ -9,6 +9,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
+
+    services:
+      myapp:
+        image: ghcr.io/honeymakhija/cbd3345_ica2/myapp-image:latest
+        ports:
+          - 8080:8080
+        options: --entrypoint "python test_app.py"
+    
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
